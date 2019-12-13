@@ -1,0 +1,17 @@
+[Unit]
+Description=force_publisher
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi
+#ExecStart=/usr/local/bin/force_publisher
+ExecStart=/usr/local/bin/force_publisher
+TimeoutStopSec=10
+StandardOutput=null
+User=pi
+Restart = on-failure
+
+[Install]
+WantedBy = multi-user.target
+
